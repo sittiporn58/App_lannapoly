@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity() {
                 message.setText(R.string.title_notifications)
                 return@OnNavigationItemSelectedListener true
             }
+            R.id.navigation_menu -> {
+                message.setText(R.string.title_menu)
+                return@OnNavigationItemSelectedListener true
+            }
         }
         false
     }
