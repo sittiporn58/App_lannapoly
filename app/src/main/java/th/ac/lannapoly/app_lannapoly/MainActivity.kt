@@ -34,10 +34,10 @@ class MainActivity : AppCompatActivity(),
                 transaction.commit()
                 return@OnNavigationItemSelectedListener true
 
-                
-                val database = FirebaseDatabase.getInstance()
-                val myRef = database.getReference("message")
-                myRef.setValue("Hello, World!")
+
+//                val database = FirebaseDatabase.getInstance()
+//                val myRef = database.getReference("message")
+//                myRef.setValue("Hello, World!")
 
             }
             R.id.navigation_dashboard -> {
