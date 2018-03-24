@@ -9,7 +9,6 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 
-//test upload
 class MainActivity : AppCompatActivity(),
         HOMEfragment.OnFragmentInteractionListener,
         Contactfragment.OnFragmentInteractionListener
@@ -24,20 +23,15 @@ class MainActivity : AppCompatActivity(),
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
-                //message.setText(R.string.title_home)
                 if(homeFragment == null){
                 homeFragment = HOMEfragment()
                 }
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.replace(R.id.frame_layout, homeFragment)
-                transaction.addToBackStack(null)
+//                transaction.addToBackStack(null)
                 transaction.commit()
                 return@OnNavigationItemSelectedListener true
-
-
-//                val database = FirebaseDatabase.getInstance()
-//                val myRef = database.getReference("message")
-//                myRef.setValue("Hello, World!")
+                
 
             }
             R.id.navigation_dashboard -> {
